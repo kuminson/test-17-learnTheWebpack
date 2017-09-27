@@ -1,25 +1,35 @@
 {
-  "name": "test-17-learnthewebpack",
+  "name": "test-17-learnTheWebpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.5.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kuminson/test-17-learnTheWebpack.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kuminson/test-17-learnTheWebpack/issues"
   },
-  "homepage": "https://github.com/kuminson/test-17-learnTheWebpack#readme"
+  "homepage": "https://github.com/kuminson/test-17-learnTheWebpack#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }

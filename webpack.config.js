@@ -1,15 +1,24 @@
-module.exports = {
-	entry: __dirname + "/app/main.js",
-	output: {
-		path: __dirname + "/public",
-		filename: "bundle.js"
-	},
-	devtool: "eval-source-map",
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-	devServer: {
-		contentBase: "./public",
-		colors: true,
-		historyApiFallback: true,
-		inline: true
+module.exports = {
+	entry: {
+		index: './src/index.js',
+		print: './src/print.js'
+	},
+	devtool: 'inline-source-map',
+	devServer:{
+		contentBase: './dist'
+	},
+	plugins:[
+		new HtmlWebpackPlugin({
+			title: 'Output Management'
+		}),
+		new CleanWebpackPlugin(['dist'])
+	],
+	output: {
+		filename: '[name].bundle.js',
+		path: path.resolve(__dirname, 'dist')
 	}
 }
